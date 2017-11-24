@@ -23,3 +23,4 @@ You are not required to handle a case where there is no item between some commas
 
 * Copy sample starter code and push it to GitHub
 * Add README.md
+* Added AngularJS library, initial app.js
