@@ -12,14 +12,6 @@
   {
     //console.log('in LunchCheckerController');
     $scope.lunchStatus = '';
-    /*$scope.getLunchStatus = function(lunchDishes)
-    {
-      if (lunchDishes === '') return 'Please enter data first';
-      let dishes = lunchDishes.split(',');
-      if (dishes.length <= 3) return 'Enjoy!';
-      return 'Too much!';
-
-    };*/
 
     $scope.checkLunch = function ()
     {
