@@ -25,4 +25,5 @@ You are not required to handle a case where there is no item between some commas
 * Add README.md
 * Added AngularJS library, initial app.js
 * Added ng tags to index.html, implemented app.js, debugging
-* Tried it on https://daveintucson.github.io/jhu-spa-angular/module1-solution/ 
+* Tried it on https://daveintucson.github.io/jhu-spa-angular/module1-solution/ ,
+* Added solution that uses a custom filter
