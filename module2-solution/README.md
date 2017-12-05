@@ -21,9 +21,10 @@ Once the user "buys" every item on the "To Buy" list, i.e., clicks on the "Bough
 ### Requirements:
 
 * You are not allowed to use regular HTML onclick attribute to bind behavior to the button. You must use the AngularJS way of binding behavior.
-* At no point should your Javascript code look up anything in the DOM of the browser.
+* At no point should your JavaScript code look up anything in the DOM of the browser.
 * Your implementation should not consist of only 1 controller that does it all: take care of both lists, store the data for both lists, etc.
 
 ### Solution:
 
 * Copied starter code, created README, pushed it to GitHub
+* Implemented single controller version (index.html, app.js)
