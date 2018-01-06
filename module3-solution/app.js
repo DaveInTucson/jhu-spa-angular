@@ -12,19 +12,20 @@
   {
     let nidc = this;
     nidc.error = null;
-    console.log('in NarrowItDownController');
+    // console.log('in NarrowItDownController');
     MenuSearchService.getAllMenuItems().then(function (response)
       {
         nidc.allMenuItems = response.data;
-        console.log('allMenuItems=', nidc.allMenuItems);
+        // console.log('allMenuItems=', nidc.allMenuItems);
       }
     ).catch(function(response)
-    {
-      ndic.error = "Error fetching menu items: " + response;
-    });
+      {
+        ndic.error = "Error fetching menu items: " + response;
+      }
+    );
   };
 
-  MenuSearchService.inject = ['$http'];
+  MenuSearchService.$inject = ['$http'];
   function MenuSearchService($http)
   {
     let service = this;
