@@ -27,11 +27,12 @@
     { return ShoppingListService.itemIsBought(index); };
   };
 
+  // A single list is used, with the bought field on each item determining
+  // whether to list it on the "To Buy" list or the "Bought" list.
+  // The act of purchasing an item changes the bought field to true.
   function ShoppingListService()
   {
     let service = this;
-    let numberOfItemsToBuy = 5;
-    let numberOfItemsBought = 0;
 
     let items = [
       { name: "cookies", quantity: 10, bought: false },
@@ -40,6 +41,9 @@
       { name: "bread"  , quantity:  2, bought: false },
       { name: "salami" , quantity:  1, bought: false },
     ];
+
+    let numberOfItemsToBuy = items.length;
+    let numberOfItemsBought = 0;
 
     service.buyItem = function(index)
     {
