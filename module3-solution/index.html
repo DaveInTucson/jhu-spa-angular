@@ -20,6 +20,8 @@
     </div>
     <div class='no-float' />
 
+    <p ng-if='nidc.resultMessage'>{{nidc.resultMessage}}</p>
+    
     <found-items
       items="nidc.matchedItems"
       on-remove="....">

@@ -12,23 +12,35 @@
   function NarrowItDownController(MenuSearchService)
   {
     let nidc = this;
-    nidc.error = null;
     nidc.matchedItems = null;
+    nidc.resultMessage = '';
     // console.log('in NarrowItDownController');
 
     nidc.OnNarrowItDown = function()
     {
         let nidc = this;
+        console.log('searchTerm=', nidc.searchTerm);
+        if (nidc.searchTerm === null || nidc.searchTerm == '')
+        {
+          nidc.resultMessage = 'Nothing found';
+          nidc.matchedItems = [];
+          return;
+        }
+        nidc.resultMessage = '';
         MenuSearchService.getMatchedMenuItems(nidc.searchTerm)
           .then(function (response)
           {
             // console.log('response=', response);
             nidc.matchedItems = response;
+            if (nidc.matchedItems.length === 0)
+            {
+              nidc.resultMessage = 'Nothing found';
+            }
           })
           .catch(function (response)
           {
             console.log('error: ', response);
-            nidc.error = "Error fetching menu items: " + response;
+            nidc.resultMessage = "Error fetching menu items: " + response;
           });
     };
   };
