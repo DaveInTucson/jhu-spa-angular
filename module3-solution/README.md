@@ -32,3 +32,9 @@ Breaking one of these rules will cause you to fail the assignment:
 * Added app.js, initial code to fetch and display menu items
 * Implemented found-items custom directive.
 * Implemented "Narrow it Down" button
+
+### To do:
+
+* Implement "nothing found" message
+* Implement "Don't Want This One!" button
+* Double check requirements for anything I missed
