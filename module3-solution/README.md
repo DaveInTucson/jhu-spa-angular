@@ -31,3 +31,4 @@ Breaking one of these rules will cause you to fail the assignment:
 * Copied starter code, created README, pushed it to GitHub
 * Added app.js, initial code to fetch and display menu items
 * Implemented found-items custom directive.
+* Implemented "Narrow it Down" button
