@@ -13,16 +13,14 @@
   {
     let nidc = this;
     nidc.matchedItems = null;
-    nidc.resultMessage = '';
     // console.log('in NarrowItDownController');
 
-    nidc.OnNarrowItDown = function()
+    nidc.onNarrowItDown = function()
     {
         let nidc = this;
         console.log('searchTerm=', nidc.searchTerm);
         if (nidc.searchTerm === null || nidc.searchTerm == '')
         {
-          nidc.resultMessage = 'Nothing found';
           nidc.matchedItems = [];
           return;
         }
@@ -32,16 +30,17 @@
           {
             // console.log('response=', response);
             nidc.matchedItems = response;
-            if (nidc.matchedItems.length === 0)
-            {
-              nidc.resultMessage = 'Nothing found';
-            }
           })
           .catch(function (response)
           {
             console.log('error: ', response);
             nidc.resultMessage = "Error fetching menu items: " + response;
           });
+    };
+
+    nidc.dontWantThisOne = function(index)
+    {
+      MenuSearchService.removeItem(index);
     };
   };
 
@@ -83,24 +82,33 @@
 
     service.getMatchedMenuItems = function(searchTerm)
     {
+      service.matchedMenuItems = null;
       return service.getAllMenuItems()
         .then(function(response)
         {
-          let matchedMenuItems = filterMenuItems(response.data.menu_items, searchTerm);
+          service.matchedMenuItems = filterMenuItems(response.data.menu_items, searchTerm);
           let deferred = $q.defer();
-          deferred.resolve(matchedMenuItems);
+          deferred.resolve(service.matchedMenuItems);
           return deferred.promise;
         });
 
     };
+
+    service.removeItem = function(index)
+    {
+        service.matchedMenuItems.splice(index, 1);
+    };
   };
+
 
   function FoundItems()
   {
     let ddo = {
       templateUrl: 'foundItemsTemplate.html',
+      restrict: 'E',
       scope: {
-        items: '=',
+        items: '<',
+        onRemove: '&',
       },
     };
     return ddo;

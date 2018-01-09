@@ -16,15 +16,13 @@
       <input type="text" placeholder="search term" class="form-control"  ng-model='nidc.searchTerm' >
     </div>
     <div class="form-group narrow-button">
-      <button class="btn btn-primary" ng-click='nidc.OnNarrowItDown()'>Narrow It Down For Me!</button>
+      <button class="btn btn-primary" ng-click='nidc.onNarrowItDown()'>Narrow It Down For Me!</button>
     </div>
     <div class='no-float' />
 
-    <p ng-if='nidc.resultMessage'>{{nidc.resultMessage}}</p>
-    
     <found-items
       items="nidc.matchedItems"
-      on-remove="....">
+      on-remove="nidc.dontWantThisOne(index)">
     </found-items>
   </div>
 

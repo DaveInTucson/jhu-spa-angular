@@ -10,6 +10,7 @@
     <td>{{item.name}}</td>
     <td>{{item.short_name}}</td>
     <td>{{item.description}}</td>
-    <td><button>Don't want this one!</button>
+    <td><button ng-click='onRemove({index:$index})'>Don't want this one!</button>
   </tr>
 </table>
+<p ng-if='items && items.length===0'>No results</p>

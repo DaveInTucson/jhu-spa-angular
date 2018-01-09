@@ -33,8 +33,9 @@ Breaking one of these rules will cause you to fail the assignment:
 * Implemented found-items custom directive.
 * Implemented "Narrow it Down" button
 * Implemented "nothing found" message
+* Implemented "Don't Want This One!" button, modified how "nothing found" message works
 
-### To do:
+### Potential requirements violations:
 
-* Implement "Don't Want This One!" button
-* Double check requirements for anything I missed
+* I called my matched item array `matchedMenuItems` instead of `found` as indicated above
+* The provided sample `index.html` had a `found-items` element and attribute, which caused a conflict with Angular. I changed the name to just `items`, although I did also add a `restrict: 'E'` declaration to remove any potential conflict. 
