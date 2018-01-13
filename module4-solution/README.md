@@ -17,8 +17,8 @@ Make sure that if, while viewing the list of menu items for a particular categor
 
 ### Implementation Instructions
 
-[Implementation.md]
+[Implementation requrements](Implementation.md)
 
 ### Solution:
 
-* Created basic starter solution skeleton with all files mentioned in [Implementation.md] and a home template.
+* Created basic starter solution skeleton with all files mentioned in [the implementation requirements](Implementation.md) and a home template.
