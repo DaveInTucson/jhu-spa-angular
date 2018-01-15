@@ -22,3 +22,4 @@ Make sure that if, while viewing the list of menu items for a particular categor
 ### Solution:
 
 * Created basic starter solution skeleton with all files mentioned in [the implementation requirements](Implementation.md) and a home template.
+* Implemented home page, started categories page
