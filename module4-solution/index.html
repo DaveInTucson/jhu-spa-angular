@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/styles.css">
-    <title>No Cookie Shopping List</title>
+    <title>Restaurant Menu Viewing App</title>
   </head>
   <body>
     <ui-view></ui-view>
 
     <!-- Libraries -->
-    <script src="lib/angular.min-1.6.6.js"></script>
+    <!-- <script src="lib/angular.min-1.6.6.js"></script> -->
+    <script src='lib/angular-1.6.6.js'></script>
     <script src="lib/angular-ui-router-1.0.3.min.js"></script>
 
     <!-- Modules -->
@@ -19,9 +20,10 @@
     <!-- Routes -->
     <script src="src/routes.js"></script>
 
-    <!-- 'ShoppingList' module artifacts -->
+    <!-- 'MenuApp' module artifacts -->
+    <script src='src/data/menudata.service.js'></script>
     <script src="src/menuapp/categories.component.js"></script>
     <script src="src/menuapp/items.component.js"></script>
-
+    <script src='src/menuapp/categories.controller.js'></script>
   </body>
 </html>
