@@ -17,9 +17,14 @@ Make sure that if, while viewing the list of menu items for a particular categor
 
 ### Implementation Instructions
 
-[Implementation requrements](Implementation.md)
+[Implementation requirements](Implementation.md)
 
 ### Solution:
 
 * Created basic starter solution skeleton with all files mentioned in [the implementation requirements](Implementation.md) and a home template.
 * Implemented home page, started categories page
+* Added category links to categories page, implemented items page
+
+### To Do:
+* register listener for `$stateChangeError` and display an appropriate message when an error occurs
+* cleanup

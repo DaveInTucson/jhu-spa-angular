@@ -29,9 +29,15 @@
             }],
           },
         })
-        // .state('items', {
-        //
-        // })
+        .state('items', {
+          url: '/items/{shortName}',
+          templateUrl: 'src/menuapp/templates/items.template.html',
+          controller: 'ItemsController as items',
+          resolve: {
+              items: ['$stateParams', 'MenuDataService', function ($stateParams, MenuDataService) {
+                return MenuDataService.getItemsForCategory($stateParams.shortName);
+              }]},
+        })
         ;
   };
 

@@ -1,0 +1,22 @@
+
+<h1>Menu Category {{items.items.category.name}}</h1>
+
+<div ng-if="items.itemList.category.special_instructions">
+<p>Special instructions:</p>
+<blockquote>{{items.itemList.category.special_instructions}}</blockquote>
+</div>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Small Portion</th>
+    <th>Large Portion</th>
+  </tr>
+  <tr ng-repeat='item in items.itemList.menu_items'>
+    <td>{{item.name}}</td>
+    <td>{{item.description}}</td>
+    <td>{{item.small_portion_name}} {{item.price_small}}</td>
+    <td>{{item.large_portion_name}} {{item.price_large}}</td>
+  </tr>
+</table>

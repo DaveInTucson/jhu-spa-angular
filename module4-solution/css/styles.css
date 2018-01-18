@@ -1,1 +1,10 @@
+table {
+    border-collapse: collapse;
+}
 
+th { text-align: left; }
+td { vertical-align: top; }
+
+tbody tr:nth-child(odd) {
+  background-color: #ddd
+}
