@@ -6,10 +6,10 @@
     .controller('ItemsController', ItemsController);
 
   ItemsController.$inject = ['items'];
-  function ItemsController(response)
+  function ItemsController(items)
   {
-    let items = this;
-    items.itemList = response.data;
+    let ctrl = this;
+    ctrl.itemList = items;
     // console.log('items=', itemList.items)
   };
 

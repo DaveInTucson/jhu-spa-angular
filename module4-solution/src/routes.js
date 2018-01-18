@@ -25,7 +25,8 @@
           controller: 'CategoriesController as categoryList',
           resolve: {
             categories: ['MenuDataService', function (MenuDataService) {
-                return MenuDataService.getAllCategories();
+                return MenuDataService.getAllCategories()
+                  .then(function (response) { return response.data; });
             }],
           },
         })
@@ -35,7 +36,8 @@
           controller: 'ItemsController as items',
           resolve: {
               items: ['$stateParams', 'MenuDataService', function ($stateParams, MenuDataService) {
-                return MenuDataService.getItemsForCategory($stateParams.shortName);
+                return MenuDataService.getItemsForCategory($stateParams.shortName)
+                  .then(function (response) { return response.data; });
               }]},
         })
         ;

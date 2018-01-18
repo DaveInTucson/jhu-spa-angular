@@ -1,5 +1,10 @@
+<p class='location'>
+  <a ui-sref='home'>home</a> /
+  <a ui-sref='categories'>categories</a> /
+  {{items.itemList.category.name}}
+</p>
 
-<h1>Menu Category {{items.items.category.name}}</h1>
+<h1>Menu Category {{items.itemList.category.name}}</h1>
 
 <div ng-if="items.itemList.category.special_instructions">
 <p>Special instructions:</p>
