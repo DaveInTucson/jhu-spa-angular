@@ -1,11 +1,5 @@
-<p class='location'>
-  <a ui-sref='home'>home</a> /
-  categories
-</p>
-
-<h1>Here is our list of menu categories:</h1>
 
 <ul>
-  <li ng-repeat='category in categoryList.categories'>
+  <li ng-repeat='category in $ctrl.categoryList'>
     <a ui-sref='items({shortName: category.short_name})'>{{category.name}}</a>
 </ul>

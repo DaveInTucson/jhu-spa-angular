@@ -10,5 +10,5 @@
   {
     let categoryList = this;
     categoryList.categories = categories;
-  };
+};
 })();
