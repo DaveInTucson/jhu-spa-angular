@@ -30,8 +30,6 @@
         });
         cancelFns.push(cancelFn);
 
-        console.log('retval=', retval);
-
         cancelFn = $transitions.onSuccess({}, function (transition)
         {
             console.log('in $transitions.onSuccess, transition=', transition);
