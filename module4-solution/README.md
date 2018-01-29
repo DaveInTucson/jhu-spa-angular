@@ -31,5 +31,9 @@ Make sure that if, while viewing the list of menu items for a particular categor
 * Add base URL constant for $http URL (as shown in lecture)
 * put `return data.response` in `menudata.service.js`
 
-### To Do:
-* other cleanup as indicated, final requirements review
+### Status:
+
+I'm going to call this done. The only potential guideline issue I see is that I put the definition 
+of `ApiBaseUrl` in the `data.module.js` file instead of giving it its own file. But it seems
+pretty silly to me to break this out into it's own file when `data.module.js` is already
+there (and pretty much empty anyway).
