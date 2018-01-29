@@ -1,16 +1,3 @@
-<p class='location'>
-  <a ui-sref='home'>home</a> /
-  <a ui-sref='categories'>categories</a> /
-  {{items.itemList.category.name}}
-</p>
-
-<h1>Menu Category {{items.itemList.category.name}}</h1>
-
-<div ng-if="items.itemList.category.special_instructions">
-<p>Special instructions:</p>
-<blockquote>{{items.itemList.category.special_instructions}}</blockquote>
-</div>
-
 <table>
   <tr>
     <th>Name</th>
@@ -18,7 +5,7 @@
     <th>Small Portion</th>
     <th>Large Portion</th>
   </tr>
-  <tr ng-repeat='item in items.itemList.menu_items'>
+  <tr ng-repeat='item in $ctrl.itemList'>
     <td>{{item.name}}</td>
     <td>{{item.description}}</td>
     <td>{{item.small_portion_name}} {{item.price_small}}</td>

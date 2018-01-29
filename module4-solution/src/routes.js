@@ -32,7 +32,7 @@
         })
         .state('items', {
           url: '/items/{shortName}',
-          templateUrl: 'src/menuapp/templates/items.template.html',
+          templateUrl: 'src/menuapp/templates/items-state.template.html',
           controller: 'ItemsController as items',
           resolve: {
               items: ['$stateParams', 'MenuDataService', function ($stateParams, MenuDataService) {

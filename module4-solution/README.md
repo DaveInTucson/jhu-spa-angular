@@ -27,9 +27,9 @@ Make sure that if, while viewing the list of menu items for a particular categor
 * Code cleanup, added backtrack links
 * Added error watcher to display an error message when a state transition fails
 * Refactored to separate categories state template and categories component
+* Refactored to separate item state template and item component
 
 ### To Do:
-* Refactor to separate item state template and item component
 * Add base URL constant for $http URL (as shown in lecture)
 * put `return data.response` in `menudata.service.js`
 * other cleanup as indicated, final requirements review
