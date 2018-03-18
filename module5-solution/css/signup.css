@@ -1,0 +1,36 @@
+#newsletter-signup h1 {
+  margin-bottom: 1em;
+}
+.signup-data input {
+  width: 28em;
+}
+.signup-data div {
+  margin-bottom: .4em;
+}
+
+.signup-data .caption {
+  text-align: right;
+  padding-top: 2px;
+}
+.signup-data .input {
+}
+#newsletter-signup button {
+  color: black;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .signup-data input {
+    width: 23em;
+  }
+}
+
+@media (max-width: 991px) {
+  .signup-data .caption {
+    text-align: left;
+    padding-left: 1em;
+  }
+  .signup-data .error {
+    padding-left: 1em;
+    font-weight: bold;
+  }
+}
